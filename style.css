@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.player {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(54, 53, 53);
+    display: flex;
+    justify-content: space-around;
+}
+
+.player .icon-pause {
+    display: none;
+}
+
+.player.playing .icon-pause {
+    display: inline-block;
+}
+
+.player.playing .icon-play {
+    display: none;
+}
+
+.playlist {
+    width: 60%;
+    height: 100%;
+    background-color: rgb(37, 32, 32);
+}
+
+.dashboard {
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    background-color: rgb(54, 53, 53);
+}
+
+/* Playlist */
+.playlist-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.header {
+    padding: 5px 5px 5px 15px;
+    color: white;
+    font-size: 40px;
+}
+
+.song {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.song:hover {
+    background-color: #191414;
+}
+
+.song:active {
+    opacity: 0.5;
+}
+
+.song .thumb {
+    width: 66px;
+    height: 66px;
+    border-radius: 15%;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.body {}
+
+.song .title {
+    font-size: 15px;
+    color: #999;
+}
+
+.song .author {
+    font-size: 10px;
+    color: #999;
+}
+
+.song .option {
+    padding: 16px 8px;
+    color: #999;
+    font-size: 30px;
+    position: absolute;
+    right: 0;
+}
+
+.song.active {
+    background-color: rgb(51, 49, 49);
+}
+
+.song.active .option,
+.song.active .author,
+.song.active .title {
+    color: #fff;
+}
+
+/* Dashboard */
+.dashboard h2 {
+    font-size: 20px;
+    color: white;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+}
+
+/* CD */
+.dashboard .cd-thumb {
+    width: 66%;
+    padding-top: 66%;
+    border-radius: 50%;
+    background-color: #333;
+    background-size: cover;
+    margin: auto;
+}
+
+/* Control */
+.control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: white;
+}
+
+.icon-play {
+    text-align: center;
+}
+
+.btn.active {
+    color: red;
+}
+
+.control .btn {
+    font-size: 20px;
+}
+
+.control .btn:hover {
+    color: rgb(29, 28, 28);
+}
+
+.dashboard .btn-play {
+    font-size: 40px;
+    border-radius: 50%;
+}
+
+.progress {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+
+.progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background-color: red;
+    cursor: pointer;
+}
+
+.volume {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-volum {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    top: 25px;
+}
+
+/* Mobie: with < 740px */
+@media only screen and (max-width: 46.1875em) {
+    .player {
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: rgb(255, 254, 254);
+        height: auto;
+    }
+
+    .playlist {
+        margin: 0;
+        background-color: white;
+        width: 100%;
+        height: 50%;
+    }
+
+    .volume,
+    .playlist-list {
+        width: 100%;
+    }
+
+    .song {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .playlist .header {
+        color: black;
+    }
+
+    .dashboard {
+        margin: 0 0 0 0;
+        width: 100%;
+        height: 35%;
+    }
+
+    .dashboard .progress {
+        height: 10px;
+        width: 100%;
+        margin: 0 0 20px 0px;
+    }
+
+    .dashboard .cd-thumb {
+        width: 44%;
+        padding-top: 44%;
+        border-radius: 50%;
+        background-color: #333;
+        background-size: cover;
+        margin: auto;
+    }
+}
+
+/* Tablet: width >= 740px and width <= 1024px*/
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {}

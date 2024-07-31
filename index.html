@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Music leaning</title>
+</head>
+
+<body>
+    <div class="player">
+        <!-- Playlist: Danh sách bài hát-->
+        <div class="playlist">
+            <div class="volume">
+                <header>
+                    <h2 class="header"> Playlist </h2>
+                </header>
+
+                <div class="btn btn-volum">
+                    <input type="range" class="volume-control" value="100" step="1" min="0" max="100">
+                </div>
+            </div>
+
+            <div class="playlist-list">
+
+            </div>
+        </div>
+        <!-- <div class="playbar">
+
+        </div> -->
+
+        <div class="dashboard">
+            <header>
+                <h2> </h2>
+            </header>
+
+            <!-- CD -->
+            <div class="cd">
+                <div class="cd-thumb"
+                    style="background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg');"></div>
+            </div>
+
+            <!-- Control -->
+            <div class="control">
+                <div class="btn btn-repeat">
+                    <i class="glyphicon glyphicon-repeat"></i>
+                </div>
+                <div class="btn btn-prev">
+                    <i class="glyphicon glyphicon-backward "></i>
+                </div>
+                <div class="btn btn-play">
+                    <i class="glyphicon glyphicon-play icon-play"></i>
+                    <i class="glyphicon glyphicon-pause icon-pause"></i>
+                </div>
+                <div class="btn btn-next">
+                    <i class="glyphicon glyphicon-forward"></i>
+                </div>
+                <div class="btn btn-random">
+                    <i class="glyphicon glyphicon-random icon-radom"></i>
+                </div>
+            </div>
+
+            <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+
+            <audio id="audio" src=""></audio>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
